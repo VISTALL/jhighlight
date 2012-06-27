@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jhighlight.iml" filepath="$PROJECT_DIR$/jhighlight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jhighlight-core/jhighlight-core.iml" filepath="$PROJECT_DIR$/jhighlight-core/jhighlight-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jhighlight-servlet/jhighlight-servlet.iml" filepath="$PROJECT_DIR$/jhighlight-servlet/jhighlight-servlet.iml" />
     </modules>
   </component>
 </project>

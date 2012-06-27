@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jhighlight" default="dist" basedir=".">
+	<property name="build.version" value="1.1" />
+
+	<property name="dist" location="dist" />
+	<property name="lib" location="lib" />
+
+	<property name="build" location="build" />
+	<property name="build.classes" location="${build}/classes" />
+
+	<property name="build.dist" location="${build}/dist" />
+	<tstamp>
+		<format property="build.tstamp" pattern="HH:mm dd.MM.yyyy" />
+	</tstamp>
+
+	<target name="clean" description="Remove the output directories.">
+		<delete dir="${build}" />
+	</target>
+
+	<target name="init" description="Create the output directories.">
+		<mkdir dir="${build}" />
+	</target>
+
+	<macrodef name="main.compile">
+		<attribute name="dir" />
+		<attribute name="name" />
+		<sequential>
+			<antcall target="init" />
+			<delete dir="${build.classes}/@{dir}" />
+			<mkdir dir="${build.classes}/@{dir}" />
+
+			<mkdir dir="${build.dist}/@{name}" />
+
+			<javac srcdir="@{dir}/src/main/java" destdir="${build.classes}/@{dir}" source="1.6" target="1.6" encoding="UTF-8" nowarn="off" classpathref="classpath">
+				<compilerarg value="-Xlint:all" />
+			</javac>
+
+			<jar destfile="${build.dist}/@{name}/@{name}-${build.version}.jar">
+				<fileset dir="${build.classes}/@{dir}" />
+				<manifest>
+					<attribute name="Build-By" value="${user.name}" />
+					<attribute name="Build-Date" value="${build.tstamp}" />
+					<attribute name="Implementation-Version" value="${build.version}" />
+				</manifest>
+			</jar>
+
+			<copy todir="${build.dist}/@{name}">
+				<fileset dir="@{dir}/lib">
+					<include name="*.jar" />
+					<exclude name="*-sources.jar" />
+				</fileset>
+			</copy>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="core.compile">
+		<attribute name="dir" />
+		<attribute name="name" />
+		<sequential>
+			<path id="classpath">
+				<fileset dir="@{dir}/lib">
+					<include name="**/*.jar" />
+				</fileset>
+			</path>
+
+			<main.compile name="@{name}" dir="@{dir}" />
+		</sequential>
+	</macrodef>
+
+	<macrodef name="etc.compile">
+		<attribute name="dir" />
+		<attribute name="name" />
+		<sequential>
+			<path id="classpath">
+				<fileset dir="@{dir}/lib">
+					<include name="**/*.jar" />
+				</fileset>
+				<fileset dir="${build.dist}/${ant.project.name}">
+					<include name="${ant.project.name}-${build.version}.jar" />
+				</fileset>
+			</path>
+
+			<main.compile name="@{name}" dir="@{dir}" />
+		</sequential>
+	</macrodef>
+
+	<target name="build.libs">
+		<core.compile dir="${ant.project.name}-core" name="${ant.project.name}" />
+		<etc.compile dir="${ant.project.name}-servlet" name="${ant.project.name}-servlet" />
+	</target>
+
+	<target name="dist" depends="clean, init, build.libs">
+		<zip destfile="${build}/${ant.project.name}-${build.version}-full.zip" basedir="${build.dist}" />
+	</target>
+</project>
