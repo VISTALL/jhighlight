@@ -7,8 +7,6 @@
  */
 package com.uwyn.jhighlight;
 
-import com.uwyn.jhighlight.renderer.XhtmlRendererFactory;
-import com.uwyn.jhighlight.tools.FileUtils;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,6 +14,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.regex.Pattern;
+
+import com.uwyn.jhighlight.renderer.XhtmlRendererFactory;
+import com.uwyn.jhighlight.tools.FileUtils;
 
 /**
  * Provides console access to the source code syntax highlighting for Java,
@@ -54,14 +55,14 @@ public class JHighlight
 {
 	public static void main(String[] arguments) throws Throwable
 	{
-		String      destdir_name = null;
-		boolean     verbose = false;
-		String		encoding = null;
-		boolean     fragment = false;
-		ArrayList   names = new ArrayList();
-		
+		String destdir_name = null;
+		boolean verbose = false;
+		String encoding = null;
+		boolean fragment = false;
+		ArrayList names = new ArrayList();
+
 		boolean valid_arguments = true;
-		if (arguments.length < 1)
+		if(arguments.length < 1)
 		{
 			valid_arguments = false;
 		}
@@ -70,57 +71,57 @@ public class JHighlight
 			boolean next_is_destdir = false;
 			boolean next_is_encoding = false;
 			String argument;
-			for (int i = 0; i < arguments.length; i++)
+			for(int i = 0; i < arguments.length; i++)
 			{
 				argument = arguments[i];
-				if (next_is_destdir)
+				if(next_is_destdir)
 				{
 					destdir_name = argument;
 					next_is_destdir = false;
 					continue;
 				}
-				
-				if (next_is_encoding)
+
+				if(next_is_encoding)
 				{
 					encoding = argument;
 					next_is_encoding = false;
 					continue;
 				}
-				
-				if (argument.equals("-d"))
+
+				if(argument.equals("-d"))
 				{
 					next_is_destdir = true;
 					continue;
 				}
-				
-				if (argument.equals("-e"))
+
+				if(argument.equals("-e"))
 				{
 					next_is_encoding = true;
 					continue;
 				}
-				
-				if (argument.equals("--verbose"))
+
+				if(argument.equals("--verbose"))
 				{
 					verbose = true;
 					continue;
 				}
-				
-				if (argument.equals("--fragment"))
+
+				if(argument.equals("--fragment"))
 				{
 					fragment = true;
 					continue;
 				}
-				
+
 				names.add(argument);
 			}
 		}
-		
-		if (0 == names.size())
+
+		if(0 == names.size())
 		{
 			valid_arguments = false;
 		}
-		
-		if (!valid_arguments)
+
+		if(!valid_arguments)
 		{
 			System.err.println("Usage : java " + JHighlight.class.getName() + " [--verbose] [--fragment] [-d destdir] [-e encoding] file|dir ...");
 			System.err.println("Generates highlighted XHTML files from all Java and XML source files");
@@ -131,45 +132,45 @@ public class JHighlight
 			System.err.println("  -e         Specify the encoding of the files");
 			System.exit(1);
 		}
-		
-		File    destdir = null;
-		if (destdir_name != null)
+
+		File destdir = null;
+		if(destdir_name != null)
 		{
 			destdir = new File(destdir_name);
-			if (!destdir.exists())
+			if(!destdir.exists())
 			{
 				throw new IOException("The destination directory '" + destdir_name + "' doesn't exist.");
 			}
-			if (!destdir.canWrite())
+			if(!destdir.canWrite())
 			{
 				throw new IOException("The destination directory '" + destdir_name + "' is not writable.");
 			}
-			if (!destdir.isDirectory())
+			if(!destdir.isDirectory())
 			{
 				throw new IOException("The destination directory '" + destdir_name + "' is not a directory.");
 			}
 		}
-		
-		Iterator    names_it = names.iterator();
-		String      name;
-		while (names_it.hasNext())
+
+		Iterator names_it = names.iterator();
+		String name;
+		while(names_it.hasNext())
 		{
-			name = (String)names_it.next();
-			
-			File    location = new File(name);
-			if (!location.exists())
+			name = (String) names_it.next();
+
+			File location = new File(name);
+			if(!location.exists())
 			{
 				throw new IOException("The source location '" + name + "' doesn't exist.");
 			}
-			if (!location.canRead())
+			if(!location.canRead())
 			{
 				throw new IOException("The source location '" + name + "' is not readable.");
 			}
-			
-			if (!location.isDirectory())
+
+			if(!location.isDirectory())
 			{
 				File out = null;
-				if (null == destdir)
+				if(null == destdir)
 				{
 					out = new File(location.getAbsolutePath() + ".html");
 				}
@@ -177,43 +178,43 @@ public class JHighlight
 				{
 					out = new File(destdir, location.getName() + ".html");
 				}
-				
+
 				highlightFile(location.getName(), location, out, encoding, fragment, verbose);
 			}
 			else
 			{
-				Set			supported_types = XhtmlRendererFactory.getSupportedTypes();
-				Pattern[]	included = new Pattern[supported_types.size()];
-				Pattern[]	excluded = new Pattern[supported_types.size()+5];
+				Set supported_types = XhtmlRendererFactory.getSupportedTypes();
+				Pattern[] included = new Pattern[supported_types.size()];
+				Pattern[] excluded = new Pattern[supported_types.size() + 5];
 				excluded[0] = Pattern.compile(".*SCCS.*");
 				excluded[0] = Pattern.compile(".*svn.*");
 				excluded[0] = Pattern.compile(".*CVS.*");
 				excluded[0] = Pattern.compile(".*jetty.*");
 				excluded[0] = Pattern.compile(".*tomcat.*");
-				
-				Iterator 	types_it = supported_types.iterator();
-				String		type;
-				int			counter = 0;
-				while (types_it.hasNext())
+
+				Iterator types_it = supported_types.iterator();
+				String type;
+				int counter = 0;
+				while(types_it.hasNext())
 				{
-					type = (String)types_it.next();
-					included[counter] = Pattern.compile(".*\\."+type+"$");
-					excluded[counter+5] = Pattern.compile(".*\\."+type+"\\.html\\.*");
+					type = (String) types_it.next();
+					included[counter] = Pattern.compile(".*\\." + type + "$");
+					excluded[counter + 5] = Pattern.compile(".*\\." + type + "\\.html\\.*");
 
 					counter++;
 				}
 
 				ArrayList file_names = FileUtils.getFileList(location, included, excluded);
-				
-				Iterator    file_names_it = file_names.iterator();
-				String      file_name;
-				while (file_names_it.hasNext())
+
+				Iterator file_names_it = file_names.iterator();
+				String file_name;
+				while(file_names_it.hasNext())
 				{
-					file_name = (String)file_names_it.next();
-					
+					file_name = (String) file_names_it.next();
+
 					File in = new File(location.getAbsolutePath() + File.separator + file_name);
 					File out = null;
-					if (null == destdir)
+					if(null == destdir)
 					{
 						out = new File(location.getAbsolutePath() + File.separator + file_name + ".html");
 					}
@@ -221,31 +222,25 @@ public class JHighlight
 					{
 						out = new File(destdir, location.getName() + File.separator + file_name + ".html");
 					}
-					
+
 					highlightFile(location.getName() + File.separator + file_name, in, out, encoding, fragment, verbose);
 				}
 			}
 		}
 	}
-	
-	private static void highlightFile(String name, File in, File out, String encoding, boolean fragment, boolean verbose)
-	throws IOException
+
+	private static void highlightFile(String name, File in, File out, String encoding, boolean fragment, boolean verbose) throws IOException
 	{
 		out.getParentFile().mkdirs();
-		
-		if (verbose)
+
+		if(verbose)
 		{
 			System.out.print(name + " ... ");
 		}
-		
-		XhtmlRendererFactory.getRenderer(FileUtils.getExtension(name))
-			.highlight(name,
-					   in.toURL().openStream(),
-					   new FileOutputStream(out),
-					   encoding,
-					   fragment);
-		
-		if (verbose)
+
+		XhtmlRendererFactory.getRenderer(FileUtils.getExtension(name)).highlight(name, in.toURL().openStream(), new FileOutputStream(out), encoding, fragment);
+
+		if(verbose)
 		{
 			System.out.println("done.");
 		}

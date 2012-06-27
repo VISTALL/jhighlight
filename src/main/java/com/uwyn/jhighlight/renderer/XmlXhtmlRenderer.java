@@ -7,11 +7,11 @@
 */
 package com.uwyn.jhighlight.renderer;
 
-import com.uwyn.jhighlight.highlighter.ExplicitStateHighlighter;
-import com.uwyn.jhighlight.highlighter.XmlHighlighter;
-import com.uwyn.jhighlight.renderer.XhtmlRenderer;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.uwyn.jhighlight.highlighter.ExplicitStateHighlighter;
+import com.uwyn.jhighlight.highlighter.XmlHighlighter;
 
 /**
  * Generates highlighted syntax in XHTML from XML source.
@@ -24,68 +24,53 @@ import java.util.Map;
  */
 public class XmlXhtmlRenderer extends XhtmlRenderer
 {
-	public final static HashMap DEFAULT_CSS = new HashMap() {{
-			put("h1",
-				"font-family: sans-serif; "+
-				"font-size: 16pt; "+
-				"font-weight: bold; "+
-				"color: rgb(0,0,0); "+
-				"background: rgb(210,210,210); "+
-				"border: solid 1px black; "+
-				"padding: 5px; "+
-				"text-align: center;");
-			
-			put("code",
-				"color: rgb(0,0,0); "+
-				"font-family: monospace; "+
-				"font-size: 12px; " +
-				"white-space: nowrap;");
-			
-			put(".xml_plain",
-				"color: rgb(0,0,0);");
-			
-			put(".xml_char_data",
-				"color: rgb(0,0,0);");
-			
-			put(".xml_tag_symbols",
-				"color: rgb(0,59,255);");
-			
-			put(".xml_comment",
-				"color: rgb(147,147,147); "+
-				"background-color: rgb(247,247,247);");
-			
-			put(".xml_attribute_value",
-				"color: rgb(193,0,0);");
-			
-			put(".xml_attribute_name",
-				"color: rgb(0,0,0); "+
-				"font-weight: bold;");
-			
-			put(".xml_processing_instruction",
-				"color: rgb(0,0,0); "+
-				"font-weight: bold; "+
-				"font-style: italic;");
-			
-			put(".xml_tag_name",
-				"color: rgb(0,55,255);");
-			
-			put(".xml_rife_tag",
-				"color: rgb(0,0,0); "+
-				"background-color: rgb(228,230,160);");
-			
-			put(".xml_rife_name",
-				"color: rgb(0,0,196); "+
-				"background-color: rgb(228,230,160);");
+	public final static HashMap DEFAULT_CSS = new HashMap()
+	{{
+			put("h1", "font-family: sans-serif; " +
+					"font-size: 16pt; " +
+					"font-weight: bold; " +
+					"color: rgb(0,0,0); " +
+					"background: rgb(210,210,210); " +
+					"border: solid 1px black; " +
+					"padding: 5px; " +
+					"text-align: center;");
+
+			put("code", "color: rgb(0,0,0); " +
+					"font-family: monospace; " +
+					"font-size: 12px; " +
+					"white-space: nowrap;");
+
+			put(".xml_plain", "color: rgb(0,0,0);");
+
+			put(".xml_char_data", "color: rgb(0,0,0);");
+
+			put(".xml_tag_symbols", "color: rgb(0,59,255);");
+
+			put(".xml_comment", "color: rgb(147,147,147); " + "background-color: rgb(247,247,247);");
+
+			put(".xml_attribute_value", "color: rgb(193,0,0);");
+
+			put(".xml_attribute_name", "color: rgb(0,0,0); " + "font-weight: bold;");
+
+			put(".xml_processing_instruction", "color: rgb(0,0,0); " +
+					"font-weight: bold; " +
+					"font-style: italic;");
+
+			put(".xml_tag_name", "color: rgb(0,55,255);");
+
+			put(".xml_rife_tag", "color: rgb(0,0,0); " + "background-color: rgb(228,230,160);");
+
+			put(".xml_rife_name", "color: rgb(0,0,196); " + "background-color: rgb(228,230,160);");
 		}};
-	
+
 	protected Map getDefaultCssStyles()
 	{
 		return DEFAULT_CSS;
 	}
-	
+
 	protected String getCssClass(int style)
 	{
-		switch (style)
+		switch(style)
 		{
 			case XmlHighlighter.PLAIN_STYLE:
 				return "xml_plain";
@@ -108,10 +93,10 @@ public class XmlXhtmlRenderer extends XhtmlRenderer
 			case XmlHighlighter.RIFE_NAME:
 				return "xml_rife_name";
 		}
-		
+
 		return null;
 	}
-		
+
 	protected ExplicitStateHighlighter getHighlighter()
 	{
 		return new XmlHighlighter();

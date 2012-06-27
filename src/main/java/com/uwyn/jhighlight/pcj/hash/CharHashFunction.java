@@ -19,33 +19,30 @@
 package com.uwyn.jhighlight.pcj.hash;
 
 /**
- *  This interface represents hash functions from char values
- *  to int values. The int value result is chosen to achieve
- *  consistence with the common
- *  {@link Object#hashCode() hashCode()}
- *  method. The interface is provided to alter the hash functions used
- *  by hashing data structures, like
- *  {@link com.uwyn.rife.pcj.map.CharKeyIntChainedHashMap CharKeyIntChainedHashMap}
- *  or
- *  {@link com.uwyn.rife.pcj.set.CharChainedHashSet CharChainedHashSet}.
+ * This interface represents hash functions from char values
+ * to int values. The int value result is chosen to achieve
+ * consistence with the common
+ * {@link Object#hashCode() hashCode()}
+ * method. The interface is provided to alter the hash functions used
+ * by hashing data structures, like
+ * {@link com.uwyn.rife.pcj.map.CharKeyIntChainedHashMap CharKeyIntChainedHashMap}
+ * or
+ * {@link com.uwyn.rife.pcj.set.CharChainedHashSet CharChainedHashSet}.
  *
- *  @see        DefaultCharHashFunction
- *
- *  @author     S&oslash;ren Bak
- *  @version    1.0     2002/29/12
- *  @since      1.0
+ * @author S&oslash;ren Bak
+ * @version 1.0     2002/29/12
+ * @see DefaultCharHashFunction
+ * @since 1.0
  */
 public interface CharHashFunction
 {
-	
-    /**
-     *  Returns a hash code for a specified char value.
-     *
-     *  @param      v
-     *              the value for which to return a hash code.
-     *
-     *  @return     a hash code for the specified value.
-     */
-    int hash(char v);
-	
+
+	/**
+	 * Returns a hash code for a specified char value.
+	 *
+	 * @param v the value for which to return a hash code.
+	 * @return a hash code for the specified value.
+	 */
+	int hash(char v);
+
 }

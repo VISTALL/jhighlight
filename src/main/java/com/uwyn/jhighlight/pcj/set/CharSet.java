@@ -21,13 +21,12 @@ package com.uwyn.jhighlight.pcj.set;
 import com.uwyn.jhighlight.pcj.CharCollection;
 
 /**
- *  This interface defines sets of char values.
+ * This interface defines sets of char values.
  *
- *  @see        java.util.Set
- *
- *  @author     S&oslash;ren Bak
- *  @version    1.0     2002/29/12
- *  @since      1.0
+ * @author S&oslash;ren Bak
+ * @version 1.0     2002/29/12
+ * @see java.util.Set
+ * @since 1.0
  */
 public interface CharSet extends CharCollection
 {

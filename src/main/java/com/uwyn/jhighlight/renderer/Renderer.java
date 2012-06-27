@@ -25,14 +25,14 @@ public interface Renderer
 	 * <code>InputStream</code> to highlighted syntax and writes it back to
 	 * an <code>OutputStream</code>.
 	 *
-	 * @param name The name of the source file.
-	 * @param in The input stream that provides the source code that needs to
-	 * be transformed.
-	 * @param out The output stream to which to result should be written.
+	 * @param name     The name of the source file.
+	 * @param in       The input stream that provides the source code that needs to
+	 *                 be transformed.
+	 * @param out      The output stream to which to result should be written.
 	 * @param encoding The encoding that will be used to read and write the
-	 * text.
+	 *                 text.
 	 * @param fragment <code>true</code> if the result should be a fragment;
-	 * or <code>false</code> if it should be a complete document
+	 *                 or <code>false</code> if it should be a complete document
 	 * @see #highlight(String, String, String, boolean)
 	 * @since 1.0
 	 */
@@ -43,13 +43,13 @@ public interface Renderer
 	 * <code>String</code> to highlighted syntax and returns it as a
 	 * <code>String</code>.
 	 *
-	 * @param name The name of the source file.
-	 * @param in The input string that provides the source code that needs to
-	 * be transformed.
+	 * @param name     The name of the source file.
+	 * @param in       The input string that provides the source code that needs to
+	 *                 be transformed.
 	 * @param encoding The encoding that will be used to read and write the
-	 * text.
+	 *                 text.
 	 * @param fragment <code>true</code> if the result should be a fragment;
-	 * or <code>false</code> if it should be a complete document
+	 *                 or <code>false</code> if it should be a complete document
 	 * @return the highlighted source code as a string
 	 * @see #highlight(String, InputStream, OutputStream, String, boolean)
 	 * @since 1.0

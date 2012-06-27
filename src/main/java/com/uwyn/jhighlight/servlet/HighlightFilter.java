@@ -7,20 +7,27 @@
  */
 package com.uwyn.jhighlight.servlet;
 
-import javax.servlet.*;
-
-import com.uwyn.jhighlight.renderer.Renderer;
-import com.uwyn.jhighlight.renderer.XhtmlRendererFactory;
-import com.uwyn.jhighlight.tools.FileUtils;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletResponseWrapper;
+
+import com.uwyn.jhighlight.renderer.Renderer;
+import com.uwyn.jhighlight.renderer.XhtmlRendererFactory;
+import com.uwyn.jhighlight.tools.FileUtils;
 
 /**
  * A servlet filter that offers on-the-fly syntax highlighting for Java, HTML,
@@ -29,12 +36,12 @@ import javax.servlet.http.HttpServletResponseWrapper;
  * <pre>&lt;filter&gt;
  *    &lt;filter-name&gt;jhighlight&lt;/filter-name&gt;
  *    &lt;filter-class&gt;com.uwyn.jhighlight.servlet.HighlightFilter&lt;/filter-class&gt;
- *&lt;/filter&gt;
- *
- *&lt;filter-mapping&gt;
+ * &lt;/filter&gt;
+ * <p/>
+ * &lt;filter-mapping&gt;
  *    &lt;filter-name&gt;jhighlight&lt;/filter-name&gt;
  *    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
- *&lt;/filter-mapping&gt;</pre>
+ * &lt;/filter-mapping&gt;</pre>
  * <p>It will respond to files with the following extensions:
  * <code>.javas</code>, <code>.htmls</code>, <code>.htms</code>,
  * <code>.xhtmls</code>, <code>.xmls</code> and <code>.lzxs</code>. These will
@@ -55,55 +62,51 @@ public final class HighlightFilter implements Filter
 	public void init(FilterConfig filterConfig)
 	{
 	}
-	
+
 	public void destroy()
 	{
 	}
-	
-	public void doFilter(ServletRequest request,
-						 ServletResponse response, FilterChain chain)
-	throws IOException, ServletException
+
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException
 	{
-		if (request instanceof HttpServletRequest &&
-			response instanceof HttpServletResponse)
+		if(request instanceof HttpServletRequest && response instanceof HttpServletResponse)
 		{
-			HttpServletRequest  http_request = (HttpServletRequest)request;
-			HttpServletResponse http_response = (HttpServletResponse)response;
-			
+			HttpServletRequest http_request = (HttpServletRequest) request;
+			HttpServletResponse http_response = (HttpServletResponse) response;
+
 			Renderer renderer = null;
 			String uri = http_request.getRequestURI();
 			String extension = FileUtils.getExtension(uri);
-			if (extension != null &&
-				extension.endsWith("s"))
+			if(extension != null && extension.endsWith("s"))
 			{
-				renderer = XhtmlRendererFactory.getRenderer(extension.substring(0, extension.length()-1));
+				renderer = XhtmlRendererFactory.getRenderer(extension.substring(0, extension.length() - 1));
 			}
-			
-			if (renderer != null)
+
+			if(renderer != null)
 			{
-				SourceRequestWrapper    request_wrapper = new SourceRequestWrapper(http_request);
-				CharResponseWrapper     response_wrapper = new CharResponseWrapper(http_response);
-				
+				SourceRequestWrapper request_wrapper = new SourceRequestWrapper(http_request);
+				CharResponseWrapper response_wrapper = new CharResponseWrapper(http_response);
+
 				chain.doFilter(request_wrapper, response_wrapper);
-				
+
 				OutputStream out = response.getOutputStream();
 				try
 				{
-					if (HttpServletResponse.SC_OK == response_wrapper.getStatus())
+					if(HttpServletResponse.SC_OK == response_wrapper.getStatus())
 					{
 						InputStream is = new ByteArrayInputStream(response_wrapper.getWrappedOutputStream().toByteArray());
 						ByteArrayOutputStream os = new ByteArrayOutputStream();
-						
+
 						String encoding = request.getCharacterEncoding();
-						if (null == encoding)
+						if(null == encoding)
 						{
 							encoding = "UTF-8";
 						}
-						
+
 						renderer.highlight(http_request.getServletPath().substring(1), is, os, encoding, false);
-						
+
 						String highlighted = os.toString("ISO-8859-1");
-						
+
 						response.setContentType("text/html");
 						response.setContentLength(highlighted.length());
 						out.write(highlighted.getBytes("ISO-8859-1"));
@@ -128,106 +131,103 @@ public final class HighlightFilter implements Filter
 			chain.doFilter(request, response);
 		}
 	}
-	
+
 	private static class SourceRequestWrapper extends HttpServletRequestWrapper
 	{
 		public SourceRequestWrapper(HttpServletRequest request)
 		{
 			super(request);
 		}
-		
+
 		public String getServletPath()
 		{
 			String path = super.getServletPath();
 			return path.substring(0, path.length() - 1);
 		}
-		
+
 		public String getPathTranslated()
 		{
 			String path = super.getPathTranslated();
 			return path.substring(0, path.length() - 1);
 		}
-		
+
 		public String getRequestURI()
 		{
-			String uri =  super.getRequestURI();
+			String uri = super.getRequestURI();
 			return uri.substring(0, uri.length() - 1);
 		}
-		
+
 		public StringBuffer getRequestURL()
 		{
-			StringBuffer url =  super.getRequestURL();
+			StringBuffer url = super.getRequestURL();
 			url.setLength(url.length() - 1);
 			return url;
 		}
 	}
-	
+
 	private static class CharResponseWrapper extends HttpServletResponseWrapper
 	{
 		private ServletOutputStreamWrapper mOutput;
 		private int mStatus = HttpServletResponse.SC_OK;
-		
+
 		public ServletOutputStreamWrapper getWrappedOutputStream()
 		{
 			return mOutput;
 		}
-		
+
 		public CharResponseWrapper(HttpServletResponse response)
 		{
 			super(response);
-			
+
 			mOutput = new ServletOutputStreamWrapper();
 		}
-		
-		public ServletOutputStream getOutputStream()
-		throws IOException
+
+		public ServletOutputStream getOutputStream() throws IOException
 		{
 			return mOutput;
 		}
-		
+
 		public void setStatus(int status)
 		{
 			mStatus = status;
-			
+
 			super.setStatus(status);
 		}
-		
-		public void sendError(int status, String msg)
-		throws IOException
+
+		public void sendError(int status, String msg) throws IOException
 		{
 			mStatus = status;
-			
+
 			super.sendError(status, msg);
 		}
-		
-		public void sendError(int status)
-		throws IOException
+
+		public void sendError(int status) throws IOException
 		{
 			mStatus = status;
-			
+
 			super.sendError(status);
 		}
-		
+
 		public int getStatus()
 		{
 			return mStatus;
 		}
 	}
-	
+
 	private static class ServletOutputStreamWrapper extends ServletOutputStream
 	{
 		protected ByteArrayOutputStream mOutput;
-		
+
 		public ServletOutputStreamWrapper()
 		{
 			mOutput = new ByteArrayOutputStream();
 		}
-		
+
 		public void write(int b) throws IOException
 		{
 			mOutput.write(b);
 		}
-		
+
 		public byte[] toByteArray()
 		{
 			return mOutput.toByteArray();

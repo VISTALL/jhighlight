@@ -13,6 +13,6 @@ package com.uwyn.jhighlight;
  */
 class JHighlightVersionSingleton
 {
-	static final JHighlightVersion	INSTANCE = new JHighlightVersion();
+	static final JHighlightVersion INSTANCE = new JHighlightVersion();
 }
 

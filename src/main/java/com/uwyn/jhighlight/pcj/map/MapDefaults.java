@@ -19,83 +19,99 @@
 package com.uwyn.jhighlight.pcj.map;
 
 /**
- *  This class implements methods for retrieving default values for
- *  each of the primitive types. The default values are returned by
- *  the maps' <tt>get()</tt>-methods when a specified key does not
- *  map to any value.
+ * This class implements methods for retrieving default values for
+ * each of the primitive types. The default values are returned by
+ * the maps' <tt>get()</tt>-methods when a specified key does not
+ * map to any value.
+ * <p/>
+ * <p>Note: Later versions may provide the ability to configure
+ * the default values returned by maps.
  *
- *  <p>Note: Later versions may provide the ability to configure
- *  the default values returned by maps.
- *
- *  @author     S&oslash;ren Bak
- *  @version    1.0     2002/29/12
- *  @since      1.0
+ * @author S&oslash;ren Bak
+ * @version 1.0     2002/29/12
+ * @since 1.0
  */
 public class MapDefaults
 {
-	
-    /**
-     *  Returns a default boolean value (<tt>false</tt>).
-     *
-     *  @return     a default boolean value (<tt>false</tt>).
-     */
-    public static boolean defaultBoolean()
-    { return false; }
-	
-    /**
-     *  Returns a default char value (<tt>'\0'</tt>).
-     *
-     *  @return     a default char value (<tt>'\0'</tt>).
-     */
-    public static char defaultChar()
-    { return '\0'; }
-	
-    /**
-     *  Returns a default byte value (<tt>0</tt>).
-     *
-     *  @return     a default byte value (<tt>0</tt>).
-     */
-    public static byte defaultByte()
-    { return 0; }
-	
-    /**
-     *  Returns a default short value (<tt>0</tt>).
-     *
-     *  @return     a default short value (<tt>0</tt>).
-     */
-    public static short defaultShort()
-    { return 0; }
-	
-    /**
-     *  Returns a default int value (<tt>0</tt>).
-     *
-     *  @return     a default int value (<tt>0</tt>).
-     */
-    public static int defaultInt()
-    { return 0; }
-	
-    /**
-     *  Returns a default long value (<tt>0L</tt>).
-     *
-     *  @return     a default long value (<tt>0L</tt>).
-     */
-    public static long defaultLong()
-    { return 0; }
-	
-    /**
-     *  Returns a default float value (<tt>0.0f</tt>).
-     *
-     *  @return     a default float value (<tt>0.0f</tt>).
-     */
-    public static float defaultFloat()
-    { return 0.0f; }
-	
-    /**
-     *  Returns a default double value (<tt>0.0</tt>).
-     *
-     *  @return     a default double value (<tt>0.0</tt>).
-     */
-    public static double defaultDouble()
-    { return 0.0; }
-	
+
+	/**
+	 * Returns a default boolean value (<tt>false</tt>).
+	 *
+	 * @return a default boolean value (<tt>false</tt>).
+	 */
+	public static boolean defaultBoolean()
+	{
+		return false;
+	}
+
+	/**
+	 * Returns a default char value (<tt>'\0'</tt>).
+	 *
+	 * @return a default char value (<tt>'\0'</tt>).
+	 */
+	public static char defaultChar()
+	{
+		return '\0';
+	}
+
+	/**
+	 * Returns a default byte value (<tt>0</tt>).
+	 *
+	 * @return a default byte value (<tt>0</tt>).
+	 */
+	public static byte defaultByte()
+	{
+		return 0;
+	}
+
+	/**
+	 * Returns a default short value (<tt>0</tt>).
+	 *
+	 * @return a default short value (<tt>0</tt>).
+	 */
+	public static short defaultShort()
+	{
+		return 0;
+	}
+
+	/**
+	 * Returns a default int value (<tt>0</tt>).
+	 *
+	 * @return a default int value (<tt>0</tt>).
+	 */
+	public static int defaultInt()
+	{
+		return 0;
+	}
+
+	/**
+	 * Returns a default long value (<tt>0L</tt>).
+	 *
+	 * @return a default long value (<tt>0L</tt>).
+	 */
+	public static long defaultLong()
+	{
+		return 0;
+	}
+
+	/**
+	 * Returns a default float value (<tt>0.0f</tt>).
+	 *
+	 * @return a default float value (<tt>0.0f</tt>).
+	 */
+	public static float defaultFloat()
+	{
+		return 0.0f;
+	}
+
+	/**
+	 * Returns a default double value (<tt>0.0</tt>).
+	 *
+	 * @return a default double value (<tt>0.0</tt>).
+	 */
+	public static double defaultDouble()
+	{
+		return 0.0;
+	}
+
 }

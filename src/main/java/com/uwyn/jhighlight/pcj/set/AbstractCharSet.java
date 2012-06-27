@@ -21,44 +21,46 @@ package com.uwyn.jhighlight.pcj.set;
 import com.uwyn.jhighlight.pcj.AbstractCharCollection;
 import com.uwyn.jhighlight.pcj.CharIterator;
 import com.uwyn.jhighlight.pcj.hash.DefaultCharHashFunction;
-import com.uwyn.jhighlight.pcj.set.CharSet;
 
 /**
- *  This class represents an abstract base for implementing
- *  sets of char values. All operations that can be implemented
- *  using iterators and the <tt>get()</tt> and <tt>set()</tt> methods
- *  are implemented as such. In most cases, this is
- *  hardly an efficient solution, and at least some of those
- *  methods should be overridden by sub-classes.
+ * This class represents an abstract base for implementing
+ * sets of char values. All operations that can be implemented
+ * using iterators and the <tt>get()</tt> and <tt>set()</tt> methods
+ * are implemented as such. In most cases, this is
+ * hardly an efficient solution, and at least some of those
+ * methods should be overridden by sub-classes.
  *
- *  @author     S&oslash;ren Bak
- *  @version    1.1     2003/1/10
- *  @since      1.0
+ * @author S&oslash;ren Bak
+ * @version 1.1     2003/1/10
+ * @since 1.0
  */
 public abstract class AbstractCharSet extends AbstractCharCollection implements CharSet
 {
-	
-    /** Default constructor to be invoked by sub-classes. */
-    protected AbstractCharSet()
-	{ }
-	
-    public boolean equals(Object obj)
+
+	/**
+	 * Default constructor to be invoked by sub-classes.
+	 */
+	protected AbstractCharSet()
 	{
-        if (!(obj instanceof CharSet))
-            return false;
-        CharSet s = (CharSet)obj;
-        if (s.size()!=size())
-            return false;
-        return containsAll(s);
-    }
-	
-    public int hashCode()
+	}
+
+	public boolean equals(Object obj)
 	{
-        int h = 0;
-        CharIterator i = iterator();
-        while (i.hasNext())
-            h += DefaultCharHashFunction.INSTANCE.hash(i.next());
-        return h;
-    }
-	
+		if(!(obj instanceof CharSet))
+			return false;
+		CharSet s = (CharSet) obj;
+		if(s.size() != size())
+			return false;
+		return containsAll(s);
+	}
+
+	public int hashCode()
+	{
+		int h = 0;
+		CharIterator i = iterator();
+		while(i.hasNext())
+			h += DefaultCharHashFunction.INSTANCE.hash(i.next());
+		return h;
+	}
+
 }

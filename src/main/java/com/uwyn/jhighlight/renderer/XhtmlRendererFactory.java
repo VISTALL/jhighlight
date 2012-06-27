@@ -32,8 +32,9 @@ public abstract class XhtmlRendererFactory
 	public final static String CPP = "cpp";
 	public final static String CXX = "cxx";
 	public final static String CPLUSPLUS = "c++";
-	
-	private final static Map RENDERERS_CLASSNAMES = new HashMap() {{
+
+	private final static Map RENDERERS_CLASSNAMES = new HashMap()
+	{{
 			put(GROOVY, GroovyXhtmlRenderer.class.getName());
 			put(JAVA, JavaXhtmlRenderer.class.getName());
 			put(BEANSHELL, JavaXhtmlRenderer.class.getName());
@@ -46,36 +47,36 @@ public abstract class XhtmlRendererFactory
 			put(CXX, CppXhtmlRenderer.class.getName());
 			put(CPLUSPLUS, CppXhtmlRenderer.class.getName());
 		}};
-	
+
 	/**
 	 * Instantiates an instance of a known <code>XhtmlRenderer</code> according to
 	 * the type that's provided.
 	 *
 	 * @param type The type of renderer, look at the static variables of this
-	 * class to see which ones are supported.
+	 *             class to see which ones are supported.
 	 * @return an instance of the <code>XhtmlRenderer</code> that corresponds to the type; or
-	 * <p><code>null</code> if the type wasn't known
+	 *         <p><code>null</code> if the type wasn't known
 	 * @since 1.0
 	 */
 	public static Renderer getRenderer(String type)
 	{
-		String classname = (String)RENDERERS_CLASSNAMES.get(type.toLowerCase());
-		if (null == classname)
+		String classname = (String) RENDERERS_CLASSNAMES.get(type.toLowerCase());
+		if(null == classname)
 		{
 			return null;
 		}
-		
+
 		try
 		{
 			Class klass = Class.forName(classname);
-			return (Renderer)klass.newInstance();
+			return (Renderer) klass.newInstance();
 		}
-		catch (Exception e)
+		catch(Exception e)
 		{
 			throw new RuntimeException(e);
 		}
 	}
-	
+
 	/**
 	 * Returned a set with all the supported XHTML renderer types.
 	 *

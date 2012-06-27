@@ -13,7 +13,7 @@ import java.io.Reader;
 
 /**
  * Provides access to the lexical scanning of a highlighted language.
- * 
+ *
  * @author Omnicore Software
  * @author Hans Kratz &amp; Dennis Strein GbR
  * @author Geert Bevin (gbevin[remove] at uwyn dot com)
@@ -24,23 +24,23 @@ public interface ExplicitStateHighlighter
 {
 	/**
 	 * Sets the reader that will be used to receive the text data.
-	 * 
+	 *
 	 * @param reader the <code>Reader</code> that has to be used
 	 */
 	void setReader(Reader reader);
 
 	/**
 	 * Obtain the next token from the scanner.
-	 * 
+	 *
 	 * @return one of the tokens that are define in the scanner
-	 * @exception IOException when an error occurred during the parsing of
-	 * the reader
+	 * @throws IOException when an error occurred during the parsing of
+	 *                     the reader
 	 */
 	byte getNextToken() throws IOException;
 
 	/**
 	 * Returns the length of the matched text region.
-	 * 
+	 *
 	 * @return the length of the matched text region
 	 */
 	int getTokenLength();

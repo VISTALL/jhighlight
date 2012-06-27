@@ -10,7 +10,7 @@ package com.uwyn.jhighlight.tools.exceptions;
 /**
  * Exception that will be trigger when unexpected errors occur during the
  * functionalities of the {@link com.uwyn.jhighlight.tools.FileUtils} class.
- * 
+ *
  * @author Geert Bevin (gbevin[remove] at uwyn dot com)
  * @version $Revision: 3108 $
  * @since 1.0
@@ -21,7 +21,7 @@ public class FileUtilsErrorException extends Exception
 	{
 		super(message);
 	}
-	
+
 	public FileUtilsErrorException(String message, Throwable cause)
 	{
 		super(message, cause);

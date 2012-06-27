@@ -19,30 +19,27 @@
 package com.uwyn.jhighlight.pcj.map;
 
 /**
- *  Thrown to indicate that an attempt was made to retrieve a
- *  non-existing mapping in a map.
+ * Thrown to indicate that an attempt was made to retrieve a
+ * non-existing mapping in a map.
  *
- *  @author     S&oslash;ren Bak
- *  @version    1.0     2002/30/12
- *  @since      1.0
+ * @author S&oslash;ren Bak
+ * @version 1.0     2002/30/12
+ * @since 1.0
  */
 public class NoSuchMappingException extends RuntimeException
 {
-	
-    /**
-     *  Creates a new exception with a specified detail message.
-     *  The message indicates the key of the mapping that was
-     *  not available.
-     *
-     *  @param      s
-     *              the detail message.
-     *
-     *  @throws     NullPointerException
-     *              if <tt>s</tt> is <tt>null</tt>.
-     */
-    public NoSuchMappingException(String s)
+
+	/**
+	 * Creates a new exception with a specified detail message.
+	 * The message indicates the key of the mapping that was
+	 * not available.
+	 *
+	 * @param s the detail message.
+	 * @throws NullPointerException if <tt>s</tt> is <tt>null</tt>.
+	 */
+	public NoSuchMappingException(String s)
 	{
-        super(s);
-    }
-	
+		super(s);
+	}
+
 }

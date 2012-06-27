@@ -19,71 +19,74 @@
 package com.uwyn.jhighlight.pcj.util;
 
 /**
- *  This class provides static methods for display of collection
- *  elements. It is only provided as a utility class for the collection
- *  implementations and is not a part of the API.
+ * This class provides static methods for display of collection
+ * elements. It is only provided as a utility class for the collection
+ * implementations and is not a part of the API.
  *
- *  @author     S&oslash;ren Bak
- *  @version    1.2     21-08-2003 20:25
+ * @author S&oslash;ren Bak
+ * @version 1.2     21-08-2003 20:25
  */
 public class Display
 {
-	
-    public static String display(boolean v)
+
+	public static String display(boolean v)
 	{
-        return String.valueOf(v);
-    }
-	
-    public static String display(byte v)
+		return String.valueOf(v);
+	}
+
+	public static String display(byte v)
 	{
-        return String.valueOf(v);
-    }
-	
-    public static String display(short v)
+		return String.valueOf(v);
+	}
+
+	public static String display(short v)
 	{
-        return String.valueOf(v);
-    }
-	
-    public static String display(int v)
+		return String.valueOf(v);
+	}
+
+	public static String display(int v)
 	{
-        return String.valueOf(v);
-    }
-	
-    public static String display(long v)
+		return String.valueOf(v);
+	}
+
+	public static String display(long v)
 	{
-        return String.valueOf(v);
-    }
-	
-    public static String display(float v)
+		return String.valueOf(v);
+	}
+
+	public static String display(float v)
 	{
-        return String.valueOf(v);
-    }
-	
-    public static String display(double v)
+		return String.valueOf(v);
+	}
+
+	public static String display(double v)
 	{
-        return String.valueOf(v);
-    }
-	
-    public static String display(char v)
+		return String.valueOf(v);
+	}
+
+	public static String display(char v)
 	{
-        return "'"+(displayChars.indexOf(v)!=-1? String.valueOf(v) :hexChar(v))+"'";
-    }
-	
-    private static final String displayChars =
-	"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#�%&/()=?\'@�${[]}+|^~*-_.:,;<>\\";
-	
-    static String hexChar(char v)
+		return "'" + (displayChars.indexOf(v) != -1 ? String.valueOf(v) : hexChar(v)) + "'";
+	}
+
+	private static final String displayChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#�%&/()=?\'@�${[]}+|^~*-_.:,;<>\\";
+
+	static String hexChar(char v)
 	{
-        String s = Integer.toHexString(v);
-        switch (s.length())
+		String s = Integer.toHexString(v);
+		switch(s.length())
 		{
-			case 1: return "\\u000"+s;
-			case 2: return "\\u00"+s;
-			case 3: return "\\u0"+s;
-			case 4: return "\\u"+s;
+			case 1:
+				return "\\u000" + s;
+			case 2:
+				return "\\u00" + s;
+			case 3:
+				return "\\u0" + s;
+			case 4:
+				return "\\u" + s;
 			default:
 				throw new RuntimeException("Internal error");
-        }
-    }
-	
+		}
+	}
+
 }

@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 /**
  * Collection of utility methods to work with files.
- * 
+ *
  * @author Geert Bevin (gbevin[remove] at uwyn dot com)
  * @version $Revision: 3108 $
  * @since 1.0
@@ -30,14 +30,14 @@ public abstract class FileUtils
 	 * absolute file names.
 	 * <p>Regular expression patterns can be provided to explicitly include
 	 * and exclude certain file names.
-	 * 
-	 * @param file the directory whose file hierarchy will be traversed
+	 *
+	 * @param file     the directory whose file hierarchy will be traversed
 	 * @param included an array of regular expression patterns that will be
-	 * used to determine which files should be included; or
-	 * <p><code>null</code> if all files should be included
+	 *                 used to determine which files should be included; or
+	 *                 <p><code>null</code> if all files should be included
 	 * @param excluded an array of regular expression patterns that will be
-	 * used to determine which files should be excluded; or
-	 * <p><code>null</code> if no files should be excluded
+	 *                 used to determine which files should be excluded; or
+	 *                 <p><code>null</code> if no files should be excluded
 	 * @return the list of absolute file names
 	 * @since 1.0
 	 */
@@ -45,58 +45,58 @@ public abstract class FileUtils
 	{
 		return getFileList(file, included, excluded, true);
 	}
-	
+
 	private static ArrayList getFileList(File file, Pattern[] included, Pattern[] excluded, boolean root)
 	{
-		if (null == file)
+		if(null == file)
 		{
 			return new ArrayList();
 		}
-		
+
 		ArrayList filelist = new ArrayList();
-		if (file.isDirectory())
+		if(file.isDirectory())
 		{
 			String[] list = file.list();
-			if (null != list)
+			if(null != list)
 			{
 				String list_entry;
-				for (int i = 0; i < list.length; i++)
+				for(int i = 0; i < list.length; i++)
 				{
 					list_entry = list[i];
-					
+
 					File next_file = new File(file.getAbsolutePath() + File.separator + list_entry);
 					ArrayList dir = getFileList(next_file, included, excluded, false);
-					
+
 					Iterator dir_it = dir.iterator();
 					String file_name;
-					while (dir_it.hasNext())
+					while(dir_it.hasNext())
 					{
-						file_name = (String)dir_it.next();
-						
-						if (root)
+						file_name = (String) dir_it.next();
+
+						if(root)
 						{
 							// if the file is not accepted, don't process it further
-							if (!StringUtils.filter(file_name, included, excluded))
+							if(!StringUtils.filter(file_name, included, excluded))
 							{
 								continue;
 							}
-							
+
 						}
 						else
 						{
 							file_name = file.getName() + File.separator + file_name;
 						}
-						
+
 						int filelist_size = filelist.size();
-						for (int j = 0; j < filelist_size; j++)
+						for(int j = 0; j < filelist_size; j++)
 						{
-							if (((String)filelist.get(j)).compareTo(file_name) > 0)
+							if(((String) filelist.get(j)).compareTo(file_name) > 0)
 							{
 								filelist.add(j, file_name);
 								break;
 							}
 						}
-						if (filelist.size() == filelist_size)
+						if(filelist.size() == filelist_size)
 						{
 							filelist.add(file_name);
 						}
@@ -104,13 +104,13 @@ public abstract class FileUtils
 				}
 			}
 		}
-		else if (file.isFile())
+		else if(file.isFile())
 		{
-			String  file_name = file.getName();
-			
-			if (root)
+			String file_name = file.getName();
+
+			if(root)
 			{
-				if (StringUtils.filter(file_name, included, excluded))
+				if(StringUtils.filter(file_name, included, excluded))
 				{
 					filelist.add(file_name);
 				}
@@ -120,22 +120,23 @@ public abstract class FileUtils
 				filelist.add(file_name);
 			}
 		}
-		
+
 		return filelist;
 	}
-	
+
 	public static String getExtension(String fileName)
 	{
-		if (null == fileName)	throw new IllegalArgumentException("fileName can't be null.");
-		
-		String	ext = null;
-		
-		int	index = fileName.lastIndexOf('.');
-		if (index > 0 &&  index < fileName.length() - 1)
+		if(null == fileName)
+			throw new IllegalArgumentException("fileName can't be null.");
+
+		String ext = null;
+
+		int index = fileName.lastIndexOf('.');
+		if(index > 0 && index < fileName.length() - 1)
 		{
-			ext = fileName.substring(index+1).toLowerCase();
+			ext = fileName.substring(index + 1).toLowerCase();
 		}
-		
+
 		return ext;
 	}
 }

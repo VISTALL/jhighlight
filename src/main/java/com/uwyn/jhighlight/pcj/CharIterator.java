@@ -19,53 +19,45 @@
 package com.uwyn.jhighlight.pcj;
 
 /**
- *  This class represents iterators over collections of char values.
+ * This class represents iterators over collections of char values.
  *
- *  @see        java.util.Iterator
- *
- *  @author     S&oslash;ren Bak
- *  @version    1.0     2002/29/12
- *  @since      1.0
+ * @author S&oslash;ren Bak
+ * @version 1.0     2002/29/12
+ * @see java.util.Iterator
+ * @since 1.0
  */
 public interface CharIterator
 {
-	
-    /**
-     *  Indicates whether more char values can be returned by this
-     *  iterator.
-     *
-     *  @return     <tt>true</tt> if more char values can be returned
-     *              by this iterator; returns <tt>false</tt>
-     *              otherwise.
-     *
-     *  @see        #next()
-     */
-    boolean hasNext();
-	
-    /**
-     *  Returns the next char value of this iterator.
-     *
-     *  @return     the next char value of this iterator.
-     *
-     *  @throws     NoSuchElementException
-     *              if no more elements are available from this
-     *              iterator.
-     *
-     *  @see        #hasNext()
-     */
-    char next();
-	
-    /**
-     *  Removes the last char value returned from the underlying
-     *  collection.
-     *
-     *  @throws     UnsupportedOperationException
-     *              if removal is not supported by this iterator.
-     *
-     *  @throws     IllegalStateException
-     *              if no element has been returned by this iterator
-     *              yet.
-     */
-    void remove();
-	
+
+	/**
+	 * Indicates whether more char values can be returned by this
+	 * iterator.
+	 *
+	 * @return <tt>true</tt> if more char values can be returned
+	 *         by this iterator; returns <tt>false</tt>
+	 *         otherwise.
+	 * @see #next()
+	 */
+	boolean hasNext();
+
+	/**
+	 * Returns the next char value of this iterator.
+	 *
+	 * @return the next char value of this iterator.
+	 * @throws NoSuchElementException if no more elements are available from this
+	 *                                iterator.
+	 * @see #hasNext()
+	 */
+	char next();
+
+	/**
+	 * Removes the last char value returned from the underlying
+	 * collection.
+	 *
+	 * @throws UnsupportedOperationException if removal is not supported by this iterator.
+	 * @throws IllegalStateException         if no element has been returned by this iterator
+	 *                                       yet.
+	 */
+	void remove();
+
 }
