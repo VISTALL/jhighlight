@@ -27,7 +27,7 @@ import javax.servlet.http.HttpServletResponseWrapper;
 
 import com.uwyn.jhighlight.renderer.Renderer;
 import com.uwyn.jhighlight.renderer.XhtmlRendererFactory;
-import com.uwyn.jhighlight.tools.FileUtils;
+import com.uwyn.jhighlight.utils.FileUtils;
 
 /**
  * A servlet filter that offers on-the-fly syntax highlighting for Java, HTML,

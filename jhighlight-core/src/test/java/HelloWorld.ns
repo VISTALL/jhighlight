@@ -1,0 +1,11 @@
+package test
+/**
+  * @author VISTALL
+  */
+class HelloWorld
+{
+	meth main(args : Array<String>)
+	{
+		System.out.println("Hello World!")
+	}
+}

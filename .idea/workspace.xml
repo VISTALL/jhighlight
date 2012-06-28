@@ -2,80 +2,179 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02f86bf5-80e7-4ded-8882-850609c85df8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/lib/commons-lang3-3.1-sources.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/lib/commons-lang3-3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/jhighlight-core.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/JHighlight.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/JHighlightVersion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/JHighlightVersionSingleton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/CppHighlighter.flex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/CppHighlighter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/ExplicitStateHighlighter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/GroovyHighlighter.flex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/GroovyHighlighter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/JavaHighlighter.flex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/JavaHighlighter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/XmlHighlighter.flex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/XmlHighlighter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/CppXhtmlRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/GroovyXhtmlRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/JavaXhtmlRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/Renderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRendererFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XmlXhtmlRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/tools/ExceptionUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/tools/FileUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/tools/StringUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-servlet/jhighlight-servlet.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-servlet/src/main/java/com/uwyn/jhighlight/servlet/HighlightFilter.java" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\JHighlight.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\JHighlightVersion.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\JHighlightVersionSingleton.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\highlighter\CppHighlighter.flex" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\highlighter\CppHighlighter.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\highlighter\ExplicitStateHighlighter.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\highlighter\GroovyHighlighter.flex" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\highlighter\GroovyHighlighter.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\highlighter\JavaHighlighter.flex" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\highlighter\JavaHighlighter.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\highlighter\XmlHighlighter.flex" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\highlighter\XmlHighlighter.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\AbstractCharCollection.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\CharCollection.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\CharIterator.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\hash\CharHashFunction.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\hash\DefaultCharHashFunction.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\hash\Primes.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\map\AbstractCharKeyMap.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\map\CharKeyMap.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\map\CharKeyMapIterator.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\map\CharKeyOpenHashMap.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\map\MapDefaults.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\map\NoSuchMappingException.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\set\AbstractCharSet.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\set\CharSet.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\util\Display.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\pcj\util\Exceptions.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\renderer\CppXhtmlRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\renderer\GroovyXhtmlRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\renderer\JavaXhtmlRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\renderer\Renderer.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\renderer\XhtmlRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\renderer\XhtmlRendererFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\renderer\XmlXhtmlRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\servlet\HighlightFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\tools\ExceptionUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\tools\FileUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\tools\StringUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="J:\napile\jhighlight\src\main\java\com\uwyn\jhighlight\tools\exceptions\FileUtilsErrorException.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/doc/crossref.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/doc/footnote.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/doc/logo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/doc/manual.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/doc/manual.ps.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/lib/JFlex.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/apache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/NapileHighlighter.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/NapileHighlighter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/NapileXhtmlRender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/utils/Locator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/utils/StringUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/utils/VersionUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/test/java/HelloWorld.ns" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jhighlight-core/src/test/java/MyCode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/.classpath" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/COPYRIGHT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/JFlex-Changes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/bin/jflex.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/bin/jflex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/doc/COPYRIGHT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/doc/jflex_anttask.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/doc/manual.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/doc/manual.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/binary/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/binary/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/binary/StraightStreamReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/binary/binary.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/byaccj/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/byaccj/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/byaccj/calc.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/byaccj/calc.y" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/cup/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/cup/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/cup/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/cup/lcalc.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/cup/output.good" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/cup/test.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/cup/ycalc.cup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/AST.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/STEfun.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/STEvar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/SymTab.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/SymtabEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tboolexp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tdekl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tdekllist.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Texp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Texpinfix.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Texplist.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tfun.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tident.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tifthenelse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tnumber.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tparlist.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tprogram.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/Tuminus.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/example.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/parser.cup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/interpreter/scanner.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/java/JavaParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/java/JavaSymbol.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/java/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/java/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/java/TestLexer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/java/java.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/java/java12.cup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/java/lexer-output.good" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/java/unicode.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/simple/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/simple/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/simple/Utility.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/simple/Yytoken.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/simple/output.good" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/simple/simple.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/simple/test.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/standalone/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/standalone/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/standalone/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/standalone/sample.inp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/examples/standalone/standalone.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/jflex-1.4.3-unicode-character-category.patch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/jflex.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/lib/jflex-mode.el" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/lib/jflex.vim" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Action.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/CharClassException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/CharClassInterval.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/CharClasses.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/CharSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/CharSetEnumerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/CountEmitter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/DFA.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/EOFActions.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Emitter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/ErrorMessages.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/GeneratorException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/HiLowEmitter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/IntCharSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/IntPair.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Interval.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/LexParse.cup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/LexParse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/LexScan.flex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/LexScan.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/LexicalStates.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/MacroException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Macros.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Messages.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/NFA.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Options.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Out.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/PackEmitter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/RegExp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/RegExp1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/RegExp2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/RegExps.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/ScannerException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/SemCheck.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/SilentExit.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Skeleton.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/StatePairList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/StateSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/StateSetEnumerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/StdOutWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/Timer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/gui/GeneratorThread.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/gui/GridPanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/gui/GridPanelConstraint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/gui/Handles.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/gui/MainFrame.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/gui/OptionsDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/skeleton.default" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/JFlex/sym.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/changelog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/java_cup/runtime/ComplexSymbolFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/java_cup/runtime/DefaultSymbolFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/java_cup/runtime/Scanner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/java_cup/runtime/Symbol.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/java_cup/runtime/SymbolFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/java_cup/runtime/lr_parser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/java_cup/runtime/virtual_parse_stack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/manifest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/lexer/jflex-1.4/src/skeleton.nested" />
+      <change type="DELETED" beforePath="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\JHighlightVersion.java" afterPath="" />
+      <change type="DELETED" beforePath="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\JHighlightVersionSingleton.java" afterPath="" />
+      <change type="DELETED" beforePath="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\tools\ExceptionUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\tools\StringUtils.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jhighlight-core/jhighlight-core.iml" afterPath="$PROJECT_DIR$/jhighlight-core/jhighlight-core.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/JHighlight.java" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/JHighlight.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/JavaHighlighter.flex" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/JavaHighlighter.flex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/JavaHighlighter.java" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/JavaHighlighter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRenderer.java" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRenderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRendererFactory.java" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRendererFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jhighlight-servlet/src/main/java/com/uwyn/jhighlight/servlet/HighlightFilter.java" afterPath="$PROJECT_DIR$/jhighlight-servlet/src/main/java/com/uwyn/jhighlight/servlet/HighlightFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jhighlight.iml" afterPath="$PROJECT_DIR$/jhighlight.iml" />
-      <change type="MOVED" beforePath="J:\napile\jhighlight\lib\servlet-api-2.3.jar" afterPath="$PROJECT_DIR$/jhighlight-servlet/lib/servlet-api-2.3.jar" />
+      <change type="MOVED" beforePath="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\renderer\CppXhtmlRenderer.java" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/CppXhtmlRenderer.java" />
+      <change type="MOVED" beforePath="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\renderer\GroovyXhtmlRenderer.java" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/GroovyXhtmlRenderer.java" />
+      <change type="MOVED" beforePath="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\renderer\JavaXhtmlRenderer.java" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/JavaXhtmlRenderer.java" />
+      <change type="MOVED" beforePath="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\renderer\XmlXhtmlRenderer.java" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/XmlXhtmlRenderer.java" />
+      <change type="MOVED" beforePath="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\tools\FileUtils.java" afterPath="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/utils/FileUtils.java" />
     </list>
     <ignored path="jhighlight.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -135,17 +234,7 @@
     <fileColor scope="Problems" color="Rose" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="9" selection-start="583" selection-end="583" vertical-scroll-proportion="0.34654588">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -159,18 +248,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/uwyn/jhighlight/servlet/HighlightFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uwyn/jhighlight/renderer/JavaXhtmlRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uwyn/jhighlight/JHighlight.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRendererFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uwyn/jhighlight/tools/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uwyn/jhighlight/tools/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestMyCode.java.html" />
-        <option value="$PROJECT_DIR$/src/test/java/TestMyCode.java" />
-        <option value="$PROJECT_DIR$/jhighlight-servlet/src/main/java/com/uwyn/jhighlight/servlet/HighlightFilter.java" />
-        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XmlXhtmlRenderer.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/tools/StringUtils.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/CppXhtmlRenderer.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/GroovyXhtmlRenderer.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/JavaXhtmlRenderer.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/XmlXhtmlRenderer.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/tools/VersionUtil.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/tools/VersionUtila.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/tools/VersionUtils.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/tools/Locator.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/utils/Locator.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/utils/VersionUtils.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRenderer.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/NapileXhtmlRender.java" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/test/java/HelloWorld.ns" />
+        <option value="$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRendererFactory.java" />
       </list>
     </option>
   </component>
@@ -228,6 +321,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -242,16 +345,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="copyright" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -265,7 +368,11 @@
   </component>
   <component name="PublishConfig" persistUploadOnCheckin="false" />
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="J:\napile\jhighlight\jhighlight-core\src\main\java\com\uwyn\jhighlight\highlighter" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="J:\napile\jhighlight\tools\lexer\jflex-1.4\src\JFlex" />
       <recent name="J:\napile\jhighlight\jhighlight-core\lib" />
       <recent name="J:\napile\jhighlight\jhighlight-servlet\lib" />
     </key>
@@ -280,19 +387,25 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.uwyn.jhighlight.JHighlight" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="src/test/java/TestMyCode.java" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="src/test/java/HelloWorld.ns" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/jhighlight-core" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="jhighlight" />
+      <module name="jhighlight-core" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Profile ">
         <option name="myExternalizedOptions" value="&#13;&#10;use-64-bit=false&#13;&#10;additional-options2=onexit\=snapshot&#13;&#10;" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -348,7 +461,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method>
@@ -383,8 +496,29 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="1">
+    <configuration default="false" name="JFlex.Main" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="JFlex.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="NapileHighlighter.flex" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="jhighlight" />
+      <envs />
+      <RunnerSettings RunnerId="Profile ">
+        <option name="myExternalizedOptions" value="&#13;&#10;use-64-bit=false&#13;&#10;additional-options2=onexit\=snapshot&#13;&#10;" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.JHighlight" />
+      <item index="1" class="java.lang.String" itemvalue="Application.JFlex.Main" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -424,7 +558,11 @@
       <created>1340795529500</created>
       <updated>1340795529500</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fully structure rework&#10;split servlet support and core &#10;added build.xml">
+      <created>1340809858659</created>
+      <updated>1340809858659</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -441,7 +579,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.66770834" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.320304" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.320304" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -498,7 +636,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="not need at repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fully structure rework&#10;split servlet support and core &#10;added build.xml" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -514,6 +652,7 @@
     <MESSAGE value="initial commin" />
     <MESSAGE value="cleanup" />
     <MESSAGE value="not need at repo" />
+    <MESSAGE value="fully structure rework&#10;split servlet support and core &#10;added build.xml" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -566,17 +705,125 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jhighlight-servlet/src/main/java/com/uwyn/jhighlight/servlet/HighlightFilter.java">
+    <entry file="jar://E:/programs/JDK/src.zip!/java/util/jar/Attributes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="13" selection-start="2507" selection-end="2507" vertical-scroll-proportion="-2.3013394">
+        <state line="97" column="18" selection-start="2865" selection-end="2865" vertical-scroll-proportion="0.3325893">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
+    <entry file="jar://E:/programs/JDK/jre/lib/rt.jar!/com/sun/xml/internal/ws/util/VersionUtil.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="9" selection-start="583" selection-end="583" vertical-scroll-proportion="0.34654588">
+        <state line="5" column="19" selection-start="172" selection-end="172" vertical-scroll-proportion="0.07589286">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/programs/JDK/src.zip!/java/io/InputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="82" selection-start="568" selection-end="568" vertical-scroll-proportion="0.18080357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/XmlXhtmlRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="13" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/programs/JDK/src.zip!/java/io/StringReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="11" selection-start="579" selection-end="579" vertical-scroll-proportion="-0.35044643">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/programs/JDK/src.zip!/java/io/BufferedInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="11" selection-start="5567" selection-end="5567" vertical-scroll-proportion="-0.008928572">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/programs/JDK/src.zip!/java/io/ByteArrayInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="34" selection-start="691" selection-end="691" vertical-scroll-proportion="0.32254463">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/programs/JDK/src.zip!/java/io/StringBufferInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="6" selection-start="924" selection-end="924" vertical-scroll-proportion="0.3325893">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/utils/VersionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="25" selection-start="830" selection-end="842" vertical-scroll-proportion="0.265625">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/JavaXhtmlRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="802" selection-end="3080" vertical-scroll-proportion="0.265625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/highlighter/NapileHighlighter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="501" column="29" selection-start="19880" selection-end="19880" vertical-scroll-proportion="0.3325893">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/impl/NapileXhtmlRender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="46" selection-start="3006" selection-end="3006" vertical-scroll-proportion="1.1897322">
+          <folding>
+            <element signature="e#0#3205#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1045#1061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/Renderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1364" selection-end="1489" vertical-scroll-proportion="0.52566963">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="16" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jhighlight-core/src/test/java/HelloWorld.ns">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="38" selection-start="139" selection-end="139" vertical-scroll-proportion="0.20870535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jhighlight-core/src/main/java/com/uwyn/jhighlight/renderer/XhtmlRendererFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="20" selection-start="1816" selection-end="1816" vertical-scroll-proportion="-0.02455357">
+          <folding>
+            <element signature="e#1644#1679#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -586,6 +833,18 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <last-edited>apache</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -12,6 +12,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import com.uwyn.jhighlight.renderer.impl.CppXhtmlRenderer;
+import com.uwyn.jhighlight.renderer.impl.GroovyXhtmlRenderer;
+import com.uwyn.jhighlight.renderer.impl.JavaXhtmlRenderer;
+import com.uwyn.jhighlight.renderer.impl.NapileXhtmlRender;
+import com.uwyn.jhighlight.renderer.impl.XmlXhtmlRenderer;
+
 /**
  * Provides a single point of entry to instantiate Xhtml renderers.
  *
@@ -23,6 +29,8 @@ public abstract class XhtmlRendererFactory
 {
 	public final static String GROOVY = "groovy";
 	public final static String JAVA = "java";
+	public final static String NS = "ns";
+	public final static String NAPILE = "napile";
 	public final static String BEANSHELL = "beanshell";
 	public final static String BSH = "bsh";
 	public final static String XML = "xml";
@@ -37,6 +45,8 @@ public abstract class XhtmlRendererFactory
 	{{
 			put(GROOVY, GroovyXhtmlRenderer.class);
 			put(JAVA, JavaXhtmlRenderer.class);
+			put(NS, NapileXhtmlRender.class);
+			put(NAPILE, NapileXhtmlRender.class);
 			put(BEANSHELL, JavaXhtmlRenderer.class);
 			put(BSH, JavaXhtmlRenderer.class);
 			put(XML, XmlXhtmlRenderer.class);

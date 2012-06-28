@@ -30,6 +30,7 @@ import java.io.IOException;
 
 	/* styles */
 	
+	public static final byte STRING_STYLE = 0;
 	public static final byte PLAIN_STYLE = 1;
 	public static final byte KEYWORD_STYLE = 2;
 	public static final byte TYPE_STYLE = 3;
@@ -118,6 +119,13 @@ FLit4 = [0-9]+ {Exponent}?
 
 Exponent = [eE] [+\-]? [0-9]+
 
+/* String literals*/
+StringLiteral={CHARACTER_LITERAL} | {STRING_LITERAL}
+
+CHARACTER_LITERAL="'"([^\\\'\r\n]|{ESCAPE_SEQUENCE})*("'"|\\)?
+STRING_LITERAL=\"([^\\\"\r\n]|{ESCAPE_SEQUENCE})*(\"|\\)?
+ESCAPE_SEQUENCE=\\[^\r\n]
+
 %state IN_COMMENT, IN_JAVA_DOC_COMMENT
 
 %%
@@ -182,8 +190,8 @@ Exponent = [eE] [+\-]? [0-9]+
   "false" |
   "null" |
 
-  (\" ( [^\"\n\\] | \\[^\n] )* (\n | \\\n | \")) |
-  (\' ( [^\'\n\\] | \\[^\n] )* (\n | \\\n | \')) |
+  {StringLiteral}
+	{ return STRING_STYLE; }
 
   {DecLiteral} |
   {HexLiteral} |

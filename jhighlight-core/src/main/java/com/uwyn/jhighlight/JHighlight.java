@@ -17,7 +17,7 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 import com.uwyn.jhighlight.renderer.XhtmlRendererFactory;
-import com.uwyn.jhighlight.tools.FileUtils;
+import com.uwyn.jhighlight.utils.FileUtils;
 
 /**
  * Provides console access to the source code syntax highlighting for Java,

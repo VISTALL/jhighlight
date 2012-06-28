@@ -8,18 +8,13 @@
 package com.uwyn.jhighlight.renderer;
 
 import java.io.*;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Properties;
-import java.util.logging.Logger;
 
 import org.apache.commons.lang3.StringEscapeUtils;
-import com.uwyn.jhighlight.JHighlightVersion;
 import com.uwyn.jhighlight.highlighter.ExplicitStateHighlighter;
-import com.uwyn.jhighlight.tools.ExceptionUtils;
-import com.uwyn.jhighlight.tools.StringUtils;
+import com.uwyn.jhighlight.utils.StringUtils;
+import com.uwyn.jhighlight.utils.VersionUtils;
 
 /**
  * Provides an abstract base class to perform source code to XHTML syntax
@@ -55,6 +50,7 @@ public abstract class XhtmlRenderer implements Renderer
 	 * @see #highlight(String, String, String, boolean)
 	 * @since 1.0
 	 */
+	@Override
 	public void highlight(String name, InputStream in, OutputStream out, String encoding, boolean fragment) throws IOException
 	{
 		ExplicitStateHighlighter highlighter = getHighlighter();
@@ -122,7 +118,7 @@ public abstract class XhtmlRenderer implements Renderer
 					}
 				}
 				newline = false;
-				w.write(StringUtils.replace(StringEscapeUtils.escapeHtml4(StringUtils.replace(token, "\n", "")), " ", "&nbsp;"));
+				w.write(StringEscapeUtils.escapeHtml4(token.replace("\n", "")).replace(" ", "&nbsp;"));
 
 				index += length;
 			}
@@ -157,10 +153,11 @@ public abstract class XhtmlRenderer implements Renderer
 	 * @see #highlight(String, InputStream, OutputStream, String, boolean)
 	 * @since 1.0
 	 */
+	@Override
 	public String highlight(String name, String in, String encoding, boolean fragment) throws IOException
 	{
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
-		highlight(name, new StringBufferInputStream(in), out, encoding, fragment);
+		highlight(name, new ByteArrayInputStream(in.getBytes(encoding)), out, encoding, fragment);
 		return out.toString(encoding);
 	}
 
@@ -171,7 +168,7 @@ public abstract class XhtmlRenderer implements Renderer
 	 * @return The map of CSS styles.
 	 * @since 1.0
 	 */
-	protected abstract Map getDefaultCssStyles();
+	protected abstract Map<String, String> getDefaultCssStyles();
 
 	/**
 	 * Looks up the CSS class identifier that corresponds to the syntax style.
@@ -203,54 +200,19 @@ public abstract class XhtmlRenderer implements Renderer
 	 */
 	protected String getCssClassDefinitions()
 	{
-		StringBuffer css = new StringBuffer();
+		StringBuilder css = new StringBuilder();
 
-		Properties properties = new Properties();
-
-		URL jhighlighter_props = getClass().getClassLoader().getResource("jhighlight.properties");
-		if(jhighlighter_props != null)
-		{
-			try
-			{
-				URLConnection connection = jhighlighter_props.openConnection();
-				connection.setUseCaches(false);
-				InputStream is = connection.getInputStream();
-
-				try
-				{
-					properties.load(is);
-				}
-				finally
-				{
-					is.close();
-				}
-			}
-			catch(IOException e)
-			{
-				Logger.getLogger("com.uwyn.jhighlight").warning("Error while reading the '" + jhighlighter_props.toExternalForm() + "' resource, using default CSS styles.\n" + ExceptionUtils.getExceptionStackTrace(e));
-			}
-		}
-
-		Iterator it = getDefaultCssStyles().entrySet().iterator();
-		Map.Entry entry;
+		Iterator<Map.Entry<String, String>> it = getDefaultCssStyles().entrySet().iterator();
+		Map.Entry<String, String> entry;
 		while(it.hasNext())
 		{
-			entry = (Map.Entry) it.next();
+			entry = it.next();
 
-			String key = (String) entry.getKey();
+			String key = entry.getKey();
 
 			css.append(key);
 			css.append(" {\n");
-
-			if(properties.containsKey(key))
-			{
-				css.append(properties.get(key));
-			}
-			else
-			{
-				css.append(entry.getValue());
-			}
-
+			css.append(entry.getValue());
 			css.append("\n}\n");
 		}
 
@@ -268,19 +230,16 @@ public abstract class XhtmlRenderer implements Renderer
 	 */
 	protected String getXhtmlHeader(String name)
 	{
-		if(null == name)
-		{
-			name = "";
-		}
+		name = org.apache.commons.lang3.StringUtils.defaultString(name);
 
 		return "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n" +
 				"                      \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n" +
 				"<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n" +
 				"<head>\n" +
 				"    <meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />\n" +
-				"    <meta name=\"generator\" content=\"JHighlight v" + JHighlightVersion.getVersion() + " (http://jhighlight.dev.java.net)\" />\n" +
+				"    <meta name=\"generator\" content=\"JHighlight v" + VersionUtils.getVersion() + " (" + VersionUtils.URL + ")\" />\n" +
 				"    <title>" + StringEscapeUtils.escapeHtml4(name) + "</title>\n" +
-				"    <link rel=\"Help\" href=\"http://jhighlight.dev.java.net\" />\n" +
+				"    <link rel=\"Help\" href=\"" + VersionUtils.URL + "\" />\n" +
 				"    <style type=\"text/css\">\n" +
 				getCssClassDefinitions() +
 				"    </style>\n" +
@@ -300,12 +259,7 @@ public abstract class XhtmlRenderer implements Renderer
 	 */
 	protected String getXhtmlHeaderFragment(String name)
 	{
-		if(null == name)
-		{
-			name = "";
-		}
-
-		return "<!-- " + name + " : generated by JHighlight v" + JHighlightVersion.getVersion() + " (http://jhighlight.dev.java.net) -->\n";
+		return "<!-- " + org.apache.commons.lang3.StringUtils.defaultString(name) + " : generated by JHighlight v" + VersionUtils.getVersion() + " (" + VersionUtils.URL + ") -->\n";
 	}
 
 	/**
@@ -318,6 +272,5 @@ public abstract class XhtmlRenderer implements Renderer
 	protected String getXhtmlFooter()
 	{
 		return "</code>\n</body>\n</html>\n";
-
 	}
 }
