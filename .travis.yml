@@ -3,3 +3,5 @@ script: ant
 branches:
   only:
     - master
+jdk:
+  - openjdk6
