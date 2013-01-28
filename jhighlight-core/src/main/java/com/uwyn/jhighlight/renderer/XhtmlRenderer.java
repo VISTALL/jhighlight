@@ -85,7 +85,7 @@ public abstract class XhtmlRenderer implements Renderer
 		int length;
 		int style;
 		String css_class;
-		int previous_style = 0;
+		int previous_style = -1;
 		boolean newline = false;
 		while((line = r.readLine()) != null)
 		{
@@ -108,7 +108,7 @@ public abstract class XhtmlRenderer implements Renderer
 
 					if(css_class != null)
 					{
-						if(previous_style != 0 && !newline)
+						if(previous_style != -1 && !newline)
 						{
 							w.write("</span>");
 						}

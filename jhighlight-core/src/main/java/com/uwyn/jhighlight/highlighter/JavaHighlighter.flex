@@ -45,7 +45,7 @@ import java.io.IOException;
 	
 	public int getStyleCount()
 	{
-		return 9;
+		return 10;
 	}
 	
 	public byte getStartState()

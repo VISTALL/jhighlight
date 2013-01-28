@@ -1,0 +1,11 @@
+package test
+/**
+  * @author VISTALL
+  */
+class HelloWorld
+{
+	static meth main(val args : Array<String>)
+	{
+		Logger.System.info("Hello World!")
+	}
+}
